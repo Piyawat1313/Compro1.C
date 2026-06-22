@@ -36,9 +36,9 @@ int main(){
             printf("Not enough money\n");
             printf("The transaction has been cancelled.\n");
        }
-       else if(w == 1000 || w == 500 || w == 100){
+       else if(w % 100 == 0){
             printf("Withdrawal successful.\n");
-            printf("Balance: %d Baht", (balance - w));
+            printf("Balance: %.2f Baht", (balance - w));
        }
        else{
             printf("The amount is incorrect\n");
@@ -52,25 +52,18 @@ int main(){
             printf("Deposit limit exceeded\n");
             printf("The transaction has been cancelled.\n");
         }
-        else if(d == 1000 || d == 500 || d == 100){
+        else if(d % 100 == 0){
             printf("Deposit successful\n");
-            printf("Balance: %d Baht\n", (d + balance));
+            printf("Balance: %.2f Baht\n", (d + balance));
         }
         else{
             printf("The deposit amount is incorrect.\n");
             printf("The transaction has been cancelled.\n");
-
-
         }
     }
     else{
-        printf("We don’t have this menu.");
+        printf("We donâ€™t have this menu.");
     }
-
-
-
-
-
 
     return 0;
 }
